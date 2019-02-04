@@ -1,33 +1,19 @@
-app.factory('Users', function() {
+app.factory('Users', ['$http', function usersService($http) {
     
-    var data =  [
-          {
-            "name": "Leanne Graham",
-            "username": "Bret",
-            "email": "Sincere@april.biz",
-          },
-          {
-            "name": "Ervin Howell",
-            "username": "Antonette",
-            "email": "Shanna@melissa.tv",
-          },
-          {
-            "name": "Clementine Bauch",
-            "username": "Samantha",
-            "email": "Nathan@yesenia.net"
-           }
-    ];
+    var urlAPI = "https://jsonplaceholder.typicode.com/users/";
 
-  /*function getUsers() {
-    return data;
-  }*/
-
-  var Users = {
-    getUsers: function getUsers () {
-        return data;
-    }
-  }
+    var Users = {
+        getUsers : function() {
+        return $http.get(urlAPI)
+            .then(function(res) {
+                return res.data;
+            })
+            .catch(function(res) {
+                return res.data;
+            });
+        }
+    };
 
   return Users
 
-});
+}]);
