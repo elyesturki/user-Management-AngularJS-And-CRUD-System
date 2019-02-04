@@ -1,7 +1,5 @@
-app.controller('usersCtrl', function($scope) {
-  $scope.users = [
-    {name:"Leanne Graham",email:"Sincere@april.biz"},
-    {name:"Ervin Howell",email:"Shanna@melissa.tv"},
-    {name:"Clementine Bauch",email:"Nathan@yesenia.net"}
-  ];
-});
+app.controller('usersCtrl', ['$scope', 'Users', function($scope, Users) {
+
+  $scope.users = Users.getUsers();
+
+}]);

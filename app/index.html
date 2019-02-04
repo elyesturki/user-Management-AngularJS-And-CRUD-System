@@ -7,14 +7,14 @@
 <div ng-app="myApp" ng-controller="usersCtrl">
 
 <ul>
-  <li ng-repeat="item in users | filter : 'april'">
-    {{ item.name | uppercase }} - Email: {{ item.email | lowercase }}
+  <li ng-repeat="item in users">
+    {{ item.name }} - Email: {{ item.email }}
   </li>
 </ul>
 
 </div>
 
 <script src="js/controller.js"></script>
-
+<script src="js/service.js"></script>
 </body>
 </html> 
