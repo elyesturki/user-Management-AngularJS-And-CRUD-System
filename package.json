@@ -1,0 +1,19 @@
+{
+  "name": "user-management",
+  "version": "1.0.0",
+  "description": "User management application and CRUD System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AngularJS",
+    "MVC",
+    "application",
+    "CRUD",
+    "RESTFull",
+    "API"
+  ],
+  "author": "E.T",
+  "license": "ISC"
+}
