@@ -1,4 +1,4 @@
-app.factory('Users', ['$http', function usersService($http) {
+app.factory('Users', ['$http', function Users($http) {
     
     var urlAPI = "https://jsonplaceholder.typicode.com/users/";
 

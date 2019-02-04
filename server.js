@@ -1,5 +1,5 @@
 //npm install connect serve-static
-//npm serve.js
+//node serve.js
 
 var connect = require('connect');
 var serveStatic = require('serve-static');
