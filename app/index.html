@@ -4,12 +4,13 @@
 <script src="app.js"></script>
 <body>
 
-<div ng-app="myApp" ng-controller="myCtrl">
+<div ng-app="myApp" ng-controller="usersCtrl">
 
-First Name: <input type="text" ng-model="firstName"><br>
-Last Name: <input type="text" ng-model="lastName"><br>
-<br>
-Full Name: {{firstName + " " + lastName}}
+<ul>
+  <li ng-repeat="item in users">
+    {{ item.name + " - Email: " + item.email }}
+  </li>
+</ul>
 
 </div>
 
