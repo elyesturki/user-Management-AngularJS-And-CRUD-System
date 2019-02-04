@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
+ <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <script src="app.js"></script>
 <body>
 
-<div ng-app="myApp" ng-controller="usersCtrl">
-
-<ul>
-  <li ng-repeat="user in users">
-    {{ user.name }} - Email: {{ user.email }}
-  </li>
-</ul>
+<div class="container" ng-app="myApp" ng-controller="usersCtrl">
+<br>
+<h1>User Management: </h1>
+<hr>
+  <table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in users">
+      <th scope="row">{{$index+1}}</th>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
 <script src="js/controller.js"></script>
 <script src="js/service.js"></script>
