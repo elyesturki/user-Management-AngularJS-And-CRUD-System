@@ -4,6 +4,7 @@
   "description": "User management application and CRUD System",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,5 +16,9 @@
     "API"
   ],
   "author": "E.T",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "serve-static": "^1.13.2"
+  }
 }
