@@ -12,6 +12,12 @@
 <br>
 <h1>User Management: </h1>
 <hr>
+<div class="row">
+   <div class="col-sm-6"><strong>{{(users | filter : filterSearch).length }}</strong> user(s) was Founded</div>
+   <div class="col-sm-6 text-right">
+   <label class="mr-2">Search: <input type="text" ng-model="filterSearch" /></label>
+  </div>
+</div>
   <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
@@ -22,7 +28,7 @@
     </tr>
   </thead>
   <tbody ng-if='displayList'>
-    <tr ng-repeat="user in users">
+    <tr ng-repeat="user in users | filter : filterSearch">
       <th scope="row">{{user.id}}</th>
       <td>{{user.name}}</td>
       <td>{{user.email}}</td>
