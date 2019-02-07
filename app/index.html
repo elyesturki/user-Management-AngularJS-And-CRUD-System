@@ -44,7 +44,24 @@
     </tr>
   </tbody>
 </table>
+<hr>
+<h2>Add user:</h2>
+<form class="myForm" id="addUserForm">
+    <label class="mr-2">Name: <input type="text" ng-model="newUser.name" /></label>
+    <label class="mr-2">E-mail: <input type="email" ng-model="newUser.email" /></label>
+    <label class="mr-2">Phone: <input type="text" ng-model="newUser.phone" /></label>
+    <input type="submit" class="btn btn-primary btn-sm" ng-click="addUser()" value="Add" />
+    <input type="button" class="btn btn-outline-danger btn-sm" ng-click="reset()" value="Reset" />
+  </form>
 
+  <div class="alert alert-danger col-sm-6 fade show" role="alert" ng-if="showMessageAddUser" ng-show="errorMessageAddUser">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Error!</strong> There was a problem to create new User.
+  </div>
+
+  <div class="alert alert-success col-sm-6 fade show" role="alert" ng-if="showMessageAddUser" ng-show="!errorMessageAddUser">
+    <strong>Succes!</strong> User successfully created.
+  </div>
 </div>
 
 <!-- Optional JavaScript -->
