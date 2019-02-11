@@ -12,7 +12,7 @@ app.service('Users', ['$http', function Users($http) {
                     return res.data;
                 });
         },
-        addUsers : function(newUser) {
+        addUser : function(newUser) {
            return $http.post(urlAPI, {
                 name : newUser.name,
                 email :  newUser.email,

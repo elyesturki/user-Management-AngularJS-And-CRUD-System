@@ -17,9 +17,8 @@ app.controller('usersCtrl', ['$scope', 'Users', '$timeout', function($scope, Use
 
   $scope.addUser = function () {
     if ($scope.newUser.name && $scope.newUser.email && $scope.newUser.phone) {
-      Users.addUsers($scope.newUser)
+      Users.addUser($scope.newUser)
       .then(function (resp) {
-        console.log('resp ',resp)
         if (resp.status !== 404) {
           $scope.users.push(resp.data);
           $scope.errorMessageAddUser = false;
