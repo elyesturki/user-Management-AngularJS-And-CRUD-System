@@ -24,6 +24,15 @@ app.service('Users', ['$http', function Users($http) {
                     console.log("err: ",err)
                     return err;
                 })
+        },
+        deleteUser : function(ID) {
+           return $http.delete(urlAPI+ID, {
+              }).then(function(res) {
+                    return res;
+                })
+                .catch(function(err) {
+                    return err;
+                })
         }
     };
 

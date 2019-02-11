@@ -38,6 +38,17 @@ app.controller('usersCtrl', ['$scope', 'Users', '$timeout', function($scope, Use
       $scope.errorMessageAddUser = true;
       $scope.showMessageAddUser = true;
     }
+  };
+
+  $scope.deleteUser = function (ID) {
+    Users.deleteUser(ID)
+      .then(function (resp) {
+        if (resp.status !== 404) {
+            $scope.users.splice($scope.users.findIndex(x => x.id === ID), 1 );
+        }
+      }).catch(function (error) {
+        console.log("CTR Error: ", error.message);
+      })
   }
 
   $scope.reset = function () {
