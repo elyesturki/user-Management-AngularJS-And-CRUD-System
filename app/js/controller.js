@@ -44,6 +44,13 @@ app.controller('usersCtrl', ['$scope', 'Users', '$timeout', function($scope, Use
       .then(function (resp) {
         if (resp.status !== 404) {
             $scope.users.splice($scope.users.findIndex(x => x.id === ID), 1 );
+            //for old browsers
+            // for (i=0; i<$scope.users.length; i++) {
+            //   if (ID === $scope.users[i].id) {
+            //     $scope.users.splice(i, 1 );
+            //     return;
+            //   }
+            // }
         }
       }).catch(function (error) {
         console.log("CTR Error: ", error.message);
